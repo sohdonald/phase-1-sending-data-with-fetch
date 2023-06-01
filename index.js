@@ -29,7 +29,7 @@
 //     });
 
 
-function submitData(name,email) {
+function submitData(userName,userEmail) {
     //event.preventDefault(); 
     return fetch("http://localhost:3000/users", {
         method: "POST",
@@ -39,8 +39,8 @@ function submitData(name,email) {
         },
 
         body: JSON.stringify({
-            name: name,
-            email: email,
+            name: userName,
+            email: userEmail,
         }),
                
     })
@@ -96,7 +96,7 @@ function putData(name,email) {
     });
 }
 
-function deleteData(name, email) {
+function deleteData() {
     fetch("http://localhost:3000/users", { // this is an object
         method: "DELETE", // type of operation
      
